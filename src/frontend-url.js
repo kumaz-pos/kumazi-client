@@ -1,1 +1,1 @@
-export const baseUrlFrontend='http://localhost:3000';
+export const baseUrlFrontend='https://kumazi-client-production.up.railway.app';
