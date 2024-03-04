@@ -11,7 +11,7 @@ function ProductModal({userData}) {
   const navigate= useNavigate();
     const [name, setname] = useState("")
     const [unit, setunit] = useState("");
-    const [currency, setcurrency] = useState(userData.country === "Zambia" && "Kwacha")
+    const [currency, setcurrency] = useState("USD")
     const [quantityBought, setquantityBought] = useState(0)
     const [quantitiesSold, setquantitiesSold] = useState(0)
     const userSignin= useSelector((state)=>state.shopOwnerSignin);
