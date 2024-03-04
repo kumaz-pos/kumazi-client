@@ -26,7 +26,7 @@ const {loading,error,data,success}=sale;
   const [ownerRate, setownerRate] = useState(0);
 const [rate, setrate] = useState("");
 const [tempRate, settempRate] = useState("");
-const [additionalCost, setadditionalCost] = useState(null);
+const [additionalCost, setadditionalCost] = useState(0);
 
   let zimRate;
   
