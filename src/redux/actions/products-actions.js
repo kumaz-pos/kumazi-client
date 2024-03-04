@@ -3,14 +3,14 @@ import axios from "axios";
 import { baseUrl } from "./baseUrl";
 export const createproduct = ( name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner) => async (dispatch, getState) => {
     try {
-    let product={name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,shop,branch,owner};
+    let product={ name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner};
         dispatch({ type: ADD_PRODUCT_REQUEST ,payload: product });
       const {
         shopOwnerSignin: { shopOwnerInfo },
       } = getState();
    
     
-      const {data}  = await axios.post(`${baseUrl}create-product`, {name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner} ,
+      const {data}  = await axios.post(`${baseUrl}create-product`, { name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner} ,
       {
         headers:{  
           

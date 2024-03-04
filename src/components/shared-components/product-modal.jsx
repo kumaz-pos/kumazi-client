@@ -33,7 +33,7 @@ let shop="65c62e57af79f6048a8adb81"
 const dispatch= useDispatch();
     function addProduct(e) {
       e.preventDefault();
-      dispatch(createproduct(name,unit,Number(quantityBought),Number(quantitiesSold),buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner))
+      dispatch(createproduct( name,unit,quantityBought,quantitiesSold,buyingPrice,sellingPrice,quantityInStock,valueOfStock,currency,shop,branch,owner))
 
     }
 
