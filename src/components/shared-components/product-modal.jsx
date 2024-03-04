@@ -11,7 +11,7 @@ function ProductModal({userData}) {
   const navigate= useNavigate();
     const [name, setname] = useState("")
     const [unit, setunit] = useState("");
-    const [currency, setcurrency] = useState("USD")
+    const [currency, setcurrency] = useState("")
     const [quantityBought, setquantityBought] = useState(0)
     const [quantitiesSold, setquantitiesSold] = useState(0)
     const userSignin= useSelector((state)=>state.shopOwnerSignin);
@@ -110,17 +110,17 @@ useEffect(() => {
                     </div>
                   </div>
                 
-                {
-                  userData.country ==="Zimbabwe" && <div className="mb-3 col">
+                <div className="mb-3 col">
                     <label class="col-3 col-form-label required">Currency</label>
                       <select onClick={(e)=>setcurrency(e.target.value)} class="form-select">
                     <option value="">Choose Currency You Bought the Product</option>
                     <option value="Zimbabwean Dollar">Zimbabwean Dollar</option>
                     <option value="USD">USD</option>
+                    <option value="Kwacha">USD</option>
                    
                   </select>
                   </div>
-                }
+                
                
                 
                 </div>
