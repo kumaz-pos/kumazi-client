@@ -116,7 +116,7 @@ useEffect(() => {
                     <option value="">Choose Currency You Bought the Product</option>
                     <option value="Zimbabwean Dollar">Zimbabwean Dollar</option>
                     <option value="USD">USD</option>
-                    <option value="Kwacha">USD</option>
+                    <option value="Kwacha">Kwacha</option>
                    
                   </select>
                   </div>
