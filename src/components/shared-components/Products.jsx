@@ -75,7 +75,7 @@ dispatch(getproducts())
           }
         </li>
         <li>
-        Value of Stock-  {item.currency}{
+        Value of Stock-  {item.currency} {
             item.quantityInStock*  item.buyingPrice
           }
         </li>
@@ -99,7 +99,7 @@ dispatch(getproducts())
          {
            <button onClick={()=>{
              dispatch(deleteproduct(item._id))
-           //  window.location.reload()
+           window.location.reload()
              }} class="btn btn-danger">Delete</button>
          }
          

@@ -165,11 +165,12 @@ export const updateproduct =(name,unit,quantityBought,quantitiesSold,buyingPrice
            
       
        )  
-   console.log(data);
+
      
             
   dispatch({type:DELETE_PRODUCT_SUCCESS,payload:data});
        } catch (error) {
+        console.log(error);
       const message=  error.response&& error.response.data.message
           ? error.response.data.message
           : error.message
