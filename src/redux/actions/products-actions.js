@@ -165,7 +165,7 @@ export const updateproduct =(name,unit,quantityBought,quantitiesSold,buyingPrice
            
       
        )  
-   
+   console.log(data);
      
             
   dispatch({type:DELETE_PRODUCT_SUCCESS,payload:data});

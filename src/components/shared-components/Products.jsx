@@ -99,7 +99,7 @@ dispatch(getproducts())
          {
            <button onClick={()=>{
              dispatch(deleteproduct(item._id))
-             window.location.reload()
+           //  window.location.reload()
              }} class="btn btn-danger">Delete</button>
          }
          
