@@ -27,6 +27,7 @@ function ShopOwnerRegister() {
   }
 
   let country=ip.country_name;
+  console.log(country)
  // let country="Zimbabwe"
   //country === "Zambia" ?;
   const [phoneNumber, setphoneNumber] = useState(country==="Zambia" ? "+260" : "+263")
