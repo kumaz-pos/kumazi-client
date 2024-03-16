@@ -35,7 +35,7 @@ const [additionalCost, setadditionalCost] = useState(null);
     let cart=useSelector((state)=>state.cart);
     let cartItems=cart.cartItems;
     let total=cartItems&& cartItems.reduce((item,{total})=>item+total,0);
-    let totalPrice=currency ==="ZWL" ? total *rate : additionalCost? Number(additionalCost)+ total:null;
+    let totalPrice=currency ==="ZWL" ? total *rate : additionalCost ? Number(additionalCost)+ total:currency === "Kwacha" ? total : null;
 let items= cartItems;
 
 
@@ -100,22 +100,27 @@ useEffect(() => {
                   <label class="form-label">Select payment method</label>
                   <div class="accordion-item">
 {
-  currency === "Kwacha" &&  <select onChange={(e)=>setpaymentMethod(e.target.value)} class="form-select">
-  <option value="">Choose Currency</option>
+  currency === "Kwacha" ?  <select onChange={(e)=>setpaymentMethod(e.target.value)} class="form-select">
+  <option value="">Choose Payment Method</option>
   <option value="Cash">Cash</option>
   
   <option value="Mtn Mobile Money">Mtn Mobile Money</option>
   <option value="Airtel Money">Airtel Money</option>
   
-</select>
-}
+</select>  : currency ==="USD" ?  <>
 <input type="text"   value={paymentMethod}               onChange={(e)=>setpaymentMethod(e.target.value)} class="form-control" placeholder="enter the payment method" aria-label="Search in website"/>
-<br/>
-{
-currency==="ZWL"  ? <input type="text"   value={rate}               onChange={(e)=>setrate(e.target.value)} class="form-control" placeholder="enter your rate" aria-label="Search in website"/> :
-  <input type="text"   value={additionalCost}               onChange={(e)=>setadditionalCost(e.target.value)} class="form-control" placeholder="enter additional cost" aria-label="Search in website"/> 
+<input type="text"   value={additionalCost}               onChange={(e)=>setadditionalCost(e.target.value)} class="form-control" placeholder="enter additional cost" aria-label="Search in website"/>
 
+</> : currency ==="ZWL" ?  <input type="text" 
+  value={rate}             
+   onChange={(e)=>setrate(e.target.value)}
+    class="form-control" placeholder="enter your rate"
+     aria-label="Search in website"/>  : null
 }
+
+
+<br/>
+
 
 </div>
                   </div>
