@@ -30,7 +30,7 @@ function ShopOwnerRegister() {
   console.log(country)
  // let country="Zimbabwe"
   //country === "Zambia" ?;
-  const [phoneNumber, setphoneNumber] = useState(country==="Zambia" ? "+260" : "+263")
+  const [phoneNumber, setphoneNumber] = useState(country==="Zambia" ? "+263"  :"+260" )
 
   const shopOwnerRegister = useSelector(state => state.shopOwnerRegister);
   console.log(ip)
