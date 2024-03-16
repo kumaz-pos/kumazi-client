@@ -32,7 +32,7 @@ function ShopOwnerRegister() {
   const [phoneNumber, setphoneNumber] = useState(country==="Zambia" ? "+260" : "+263")
 
   const shopOwnerRegister = useSelector(state => state.shopOwnerRegister);
-  
+  console.log(ip)
  
   const {shopOwnerInfo,loading,error}=shopOwnerRegister ;
 
