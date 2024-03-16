@@ -99,7 +99,16 @@ useEffect(() => {
                   <div class="mb-3">
                   <label class="form-label">Select payment method</label>
                   <div class="accordion-item">
-
+{
+  currency === "Kwacha" &&  <select onChange={(e)=>setpaymentMethod(e.target.value)} class="form-select">
+  <option value="">Choose Currency</option>
+  <option value="Cash">Cash</option>
+  
+  <option value="Mtn Mobile Money">Mtn Mobile Money</option>
+  <option value="Airtel Money">Airtel Money</option>
+  
+</select>
+}
 <input type="text"   value={paymentMethod}               onChange={(e)=>setpaymentMethod(e.target.value)} class="form-control" placeholder="enter the payment method" aria-label="Search in website"/>
 <br/>
 {
